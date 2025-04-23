@@ -7,7 +7,7 @@ Content-Type: application/json
 ###
 
 # Получение конкретного объявления любым пользователем.
-GET http://localhost:8000/api/advertisements/1/
+GET http://localhost:8000/api/advertisements/83/
 Content-Type: application/json
 
 
@@ -43,7 +43,7 @@ Authorization: Token a8b25308daa0fd0c9d72a9b5fc6cf38689fcf875
 
 # попытка поменять текст объявления. Пользователь admin.
 # текст меняется в открытых и закрытых объявлениях.
-PATCH http://localhost:8000/api/advertisements/1/
+PATCH http://localhost:8000/api/advertisements/6/
 Content-Type: application/json
 Authorization: Token e5e5ba06a5ce963b31a6086fef86a46ea140ad27
 
@@ -56,7 +56,7 @@ Authorization: Token e5e5ba06a5ce963b31a6086fef86a46ea140ad27
 
 # попытка поменять текст объявления. Пользователь sergei.
 # текст меняется в открытых и закрытых объявлениях.
-PATCH http://localhost:8000/api/advertisements/6/
+PATCH http://localhost:8000/api/advertisements/74/
 Content-Type: application/json
 Authorization: Token a8b25308daa0fd0c9d72a9b5fc6cf38689fcf875
 
@@ -68,7 +68,7 @@ Authorization: Token a8b25308daa0fd0c9d72a9b5fc6cf38689fcf875
 ###
 
 # попытка открыть/закрыть объявление. Пользователь admin.
-PATCH http://localhost:8000/api/advertisements/53/
+PATCH http://localhost:8000/api/advertisements/82/
 Content-Type: application/json
 Authorization: Token e5e5ba06a5ce963b31a6086fef86a46ea140ad27
 
@@ -79,25 +79,25 @@ Authorization: Token e5e5ba06a5ce963b31a6086fef86a46ea140ad27
 ###
 
 # попытка открыть/закрыть объявление. Пользователь sergei.
-PATCH http://localhost:8000/api/advertisements/36/
+PATCH http://localhost:8000/api/advertisements/6/
 Content-Type: application/json
 Authorization: Token a8b25308daa0fd0c9d72a9b5fc6cf38689fcf875
 
 {
-  "status": "OPEN"
+  "status": "CLOSED"
 }
 
 ###
 
 # удаление своего объявления. Пользователь admin.
-DELETE http://localhost:8000/api/advertisements/5/
+DELETE http://localhost:8000/api/advertisements/84/
 Content-Type: application/json
 Authorization: Token e5e5ba06a5ce963b31a6086fef86a46ea140ad27
 
 ###
 
 # удаление своего объявления. Пользователь sergei.
-DELETE http://localhost:8000/api/advertisements/51/
+DELETE http://localhost:8000/api/advertisements/82/
 Content-Type: application/json
 Authorization: Token a8b25308daa0fd0c9d72a9b5fc6cf38689fcf875
 
@@ -111,7 +111,7 @@ Content-Type: application/json
 
 # фильтрация объявлений по дате создания.
 # вывод всех объявлений, созданных до выбранной даты. 
-GET http://localhost:8000/api/advertisements/?created_at_before=2025-04-14
+GET http://localhost:8000/api/advertisements/?created_at_before=2025-04-16
 Content-Type: application/json
 
 ###
